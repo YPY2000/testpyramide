@@ -31,52 +31,49 @@
     }
     .level1 { background-color: #e3f2fd; }
     .level2 { background-color: #fff3e0; }
-    .level3 { background-color: #e8f5e9; }
+    .level3 { background-color: #e8f5e9; cursor: default; }
   </style>
 </head>
 <body>
 
+  <!-- Unternehmensziel -->
   <div class="box level1" onclick="toggle('abteilungen')">
     <h2>🎯 Unternehmensziel</h2>
     <p>Unsere Mission: Beste Mitarbeiterplattform Europas!</p>
   </div>
 
- <!-- Abteilungen -->
-<div id="abteilungen" class="row hidden">
-  <div class="box level2" onclick="toggle('mitarbeiter1')">
-    <h3>📁 IT-Ziel</h3>
-    <p>Support vereinfachen & Infrastruktur modernisieren</p>
+  <!-- Abteilungen -->
+  <div id="abteilungen" class="row hidden">
+    <div class="box level2" onclick="toggle('mitarbeiter1')">
+      <h3>📁 IT-Ziel</h3>
+      <p>Support vereinfachen & Infrastruktur modernisieren</p>
+    </div>
+    <div class="box level2" onclick="toggle('mitarbeiter2')">
+      <h3>📁 HR-Ziel</h3>
+      <p>Onboarding optimieren & Schulungsausbau</p>
+    </div>
   </div>
-  <div class="box level2" onclick="toggle('mitarbeiter2')">
-    <h3>📁 HR-Ziel</h3>
-    <p>Onboarding optimieren & Schulungsausbau</p>
-  </div>
-</div>
 
-<!-- IT-Mitarbeiter -->
-<div id="mitarbeiter1" class="row hidden">
-  <div class="box level3">
-    <h4>👨‍💻 Max</h4>
-    <p>Tool-Dokumentation verbessern</p>
+  <!-- IT-Mitarbeiter -->
+  <div id="mitarbeiter1" class="row hidden">
+    <div class="box level3">
+      <h4>👨‍💻 Max</h4>
+      <p>Tool-Dokumentation verbessern</p>
+    </div>
   </div>
-</div>
 
-<!-- HR-Mitarbeiter -->
-<div id="mitarbeiter2" class="row hidden">
-  <div class="box level3">
-    <h4>👩 Lisa</h4>
-    <p>Cloud-Migration vorbereiten</p>
+  <!-- HR-Mitarbeiter -->
+  <div id="mitarbeiter2" class="row hidden">
+    <div class="box level3">
+      <h4>👩 Lisa</h4>
+      <p>Cloud-Migration vorbereiten</p>
+    </div>
   </div>
-</div>
 
   <script>
     function toggle(id) {
       const el = document.getElementById(id);
-      if (el.classList.contains("hidden")) {
-        el.classList.remove("hidden");
-      } else {
-        el.classList.add("hidden");
-      }
+      el.classList.toggle("hidden");
     }
   </script>
 
