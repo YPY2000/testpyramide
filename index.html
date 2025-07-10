@@ -42,40 +42,40 @@
     <p>Unsere Mission: Beste Mitarbeiterplattform Europas!</p>
   </div>
 
-  <!-- Abteilungen -->
-  <div id="abteilungen" class="row hidden">
-    <div class="box level2" onclick="toggle('mitarbeiter1')">
-      <h3>📁 IT-Ziel</h3>
-      <p>Support vereinfachen & Infrastruktur modernisieren</p>
-    </div>
-    <div class="box level2" onclick="toggle('mitarbeiter2')">
-      <h3>📁 HR-Ziel</h3>
-      <p>Onboarding optimieren & Schulungsausbau</p>
-    </div>
+ <!-- Abteilungen -->
+<div id="abteilungen" class="row hidden">
+  <div class="box level2" onclick="toggle('max')">
+    <h3>📁 IT-Ziel</h3>
+    <p>Support vereinfachen & Infrastruktur modernisieren</p>
+  </div>
+  <div class="box level2" onclick="toggle('lisa')">
+    <h3>📁 HR-Ziel</h3>
+    <p>Onboarding optimieren & Schulungsausbau</p>
+  </div>
+</div>
+  
+<!-- Gemeinsamer Mitarbeiter-Container -->
+<div class="row" id="mitarbeiter-zeile">
+  <!-- Max -->
+  <div class="box level3 hidden" id="max">
+    <h4>👨‍💻 Max</h4>
+    <p>Tool-Dokumentation verbessern</p>
   </div>
 
-  <!-- IT-Mitarbeiter -->
-  <div id="mitarbeiter1" class="row hidden">
-    <div class="box level3">
-      <h4>👨‍💻 Max</h4>
-      <p>Tool-Dokumentation verbessern</p>
-    </div>
+  <!-- Lisa -->
+  <div class="box level3 hidden" id="lisa">
+    <h4>👩 Lisa</h4>
+    <p>Cloud-Migration vorbereiten</p>
   </div>
+</div>
 
-  <!-- HR-Mitarbeiter -->
-  <div id="mitarbeiter2" class="row hidden">
-    <div class="box level3">
-      <h4>👩 Lisa</h4>
-      <p>Cloud-Migration vorbereiten</p>
-    </div>
-  </div>
 
   <script>
-    function toggle(id) {
-      const el = document.getElementById(id);
-      el.classList.toggle("hidden");
-    }
-  </script>
+  function toggle(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle("hidden");
+  }
+</script>
 
 </body>
 </html>
