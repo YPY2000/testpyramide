@@ -26,9 +26,18 @@
       justify-content: center;
       flex-wrap: wrap;
     }
-    .hidden {
-      display: none;
-    }
+   .hidden {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all 0.4s ease;
+   }
+
+  .show {
+  opacity: 1;
+  max-height: 500px; /* genug Platz */
+}
+
     .level1 { background-color: #e3f2fd; }
     .level2 { background-color: #fff3e0; }
     .level3 { background-color: #e8f5e9; cursor: default; }
@@ -70,12 +79,14 @@
 </div>
 
 
-  <script>
+<script>
   function toggle(id) {
     const el = document.getElementById(id);
+    el.classList.toggle("show");
     el.classList.toggle("hidden");
   }
 </script>
+
 
 </body>
 </html>
